@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor CSV</title>
+</head>
+<body>
+    <h1>Leitor de Arquivo CSV</h1>
+    <div id="output">
+        <!-- O resultado do CSV será exibido aqui -->
+    </div>
+
+    <script>
+        // O seu código JavaScript aqui
+        const fs = require('fs');
+
+        const filename = 'teste.csv';
+
+        fs.readFile(filename, 'utf8', (err, data) => {
+            if (err) {
+                console.error(`Erro ao ler o arquivo ${filename}: ${err}`);
+                return;
+            }
+
+            const lines = data.trim().split('\n');
+            let row = 1;
+            let output = document.getElementById('output');
+
+            lines.forEach(line => {
+                const fields = line.split(',');
+                const num = fields.length;
+
+                output.innerHTML += `<p>${num} campos na linha ${row}:</p>`;
+
+                fields.forEach(field => {
+                    output.innerHTML += `${field}<br>`;
+                });
+
+                row++;
+            });
+        });
+    </script>
+</body>
+</html>
