@@ -1,0 +1,24 @@
+{
+  "name": "csv-javascript",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luismendes070/csv-javascript.git"
+  },
+  "keywords": [
+    "csv",
+    "javascript"
+  ],
+  "author": "Luis Mendes",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/luismendes070/csv-javascript/issues"
+  },
+  "homepage": "https://github.com/luismendes070/csv-javascript#readme"
+}
